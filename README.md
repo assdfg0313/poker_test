@@ -9,4 +9,4 @@
 
 ## 배포 link
 
-https://poker-test-xi.vercel.app/
+https://poker-test-9zsf0zjjx-assdfg0313.vercel.app
