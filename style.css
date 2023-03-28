@@ -1,0 +1,157 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+body main .searchResult, body main .search, body main .quotePart, body main .mainImage {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body main .searchResult .resultText, body main .quotePart {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+body main .search .searchBtn {
+  border: 0;
+  background-color: transparent;
+  border-radius: 16px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: red;
+  color: white;
+}
+
+body main .search .searchContainer {
+  border: 0;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+body main .search .searchContainer:focus {
+  outline: 0;
+}
+
+body header .menu .fourthShowPart img, body header .menu .thirdShowPart img, body header .menu .secondShowPart img, body header .menu .firstShowPart img {
+  display: inline;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0px 8.5px;
+  margin: 1px;
+  width: 34px;
+  height: 40px;
+}
+body header .menu .fourthShowPart div, body header .menu .thirdShowPart div, body header .menu .secondShowPart div, body header .menu .firstShowPart div {
+  display: none;
+}
+
+body header .menu .fourthShowPart:hover, body header .menu .thirdShowPart:hover, body header .menu .secondShowPart:hover, body header .menu .firstShowPart:hover {
+  display: flex;
+  justify-content: flex-start;
+  vertical-align: bottom;
+}
+body header .menu .fourthShowPart:hover img, body header .menu .thirdShowPart:hover img, body header .menu .secondShowPart:hover img, body header .menu .firstShowPart:hover img {
+  display: none;
+}
+body header .menu .fourthShowPart:hover div, body header .menu .thirdShowPart:hover div, body header .menu .secondShowPart:hover div, body header .menu .firstShowPart:hover div {
+  text-align: center;
+  display: block;
+  margin-top: 336px;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard";
+}
+body header {
+  z-index: 2;
+  color: white;
+  height: 64px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .time {
+  margin-left: 20px;
+  font-size: 20px;
+  color: yellow;
+  text-shadow: 2px 8px 6px rgba(255, 0, 0, 0.8), 0px -3px 20px rgba(255, 255, 255, 0.7);
+}
+body header .menu {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+body main {
+  margin: 0;
+}
+body main img {
+  vertical-align: bottom;
+  position: relative;
+  width: 100%;
+  object-fit: contain;
+}
+body main .mainImage {
+  top: 128px;
+  height: 150px;
+  object-fit: contain;
+}
+body main .quotePart {
+  top: 203px;
+  margin-top: 64px;
+}
+body main .search {
+  top: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .search .searchContainer {
+  background-color: white;
+  width: 50%;
+  font-size: 20px;
+  margin-right: 30px;
+  padding: 5px 10px;
+}
+body main .searchResult {
+  top: 60%;
+}
+body main .searchResult .resultCard {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+}
+body main .searchResult .resultCard img {
+  margin: 10px 5px;
+  width: 100px;
+  height: 150px;
+}
+body footer {
+  border-top: 1px solid grey;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+}
+body footer .companyInfo {
+  margin-right: 100px;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

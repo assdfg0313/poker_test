@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="time">Time 이 들어올 장소!</div>
+      <div class="menu">
+        <div class="firstShowPart"><img src="card/s.png" alt="" />
+          <div><h2>사용법</h2>ㅁㅁㅁ<br>(숫자1)(숫자2)(타입)<br><h3>숫자</h3>2 ~ 9, t, j, q, k, a<br><h3>타입</h3>p (pocket)<br>s (suited)<br>o (off-suit)<h3>예시</h3>aap, q2s, jto</div></div>
+        <div class="secondShowPart"><img src="card/d.png" alt="" />
+          <div><h2>핸드 순위란?</h2>프리플랍에서 누가 강한 핸드인지 알 수 있음.<br>(보드에 카드들이 깔리기 전에)</div></div>
+        <div class="thirdShowPart"><img src="card/c.png" alt="" />
+          <div><h2>포커는 인생이다</h2></div></div>
+        <div class="fourthShowPart">
+          <img src="card/h.png" alt="" />
+          <div><h3>포커는 도박이 아닙니다.<br><br>심리, 수학논리, GTO 등이 결합된 복합 스포츠 입니다.</h3></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <img src="background.png" alt="">
+      <img class="mainImage" src="wp_title.gif" alt=""/>
+      <div class="quotePart"></div>
+      <div class="search">
+        <input class="searchContainer" type="text" onkeypress="onClickSearch()" placeholder="값을 입력해주세요. (ex. aap, q4s, k8o)">
+        </input>
+        <div class="searchBtn" onclick="onClickSearch()">검색</div>
+      </div>
+      <div class="searchResult">
+        <div class="resultText"></div>
+        <div class="resultCard"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="companyInfo">(주)레이즈</div>
+      <div>제주특별자치도 제주시 중앙로 23</div>
+    </footer>
+  </body>
+  <script type="text/javascript" src="main.js"></script>
+</html>

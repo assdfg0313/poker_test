@@ -1,0 +1,223 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+$topBarHeight: 64px;
+$mainImageHeight: 150px;
+
+$opacityBackgroundColor: rgba(0, 0, 0, 0.7);
+$opacityWhiteBackgroundColor: rgba(255, 255, 255, 0.3);
+
+%childCenterStyle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%textContainer {  
+  color: white;
+  background-color: $opacityBackgroundColor;
+  padding: 15px 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+%buttonStyle {
+  border: 0;
+  background-color: transparent;
+  border-radius: 16px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: red;
+  color: white;
+}
+
+%inputStyle {
+  border: 0;
+  border-radius: 8px;
+  padding: 4px 8px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+%menuStyle {
+  img {
+    display: inline;
+    background-color: $opacityWhiteBackgroundColor;
+    padding: 0px 8.5px;
+    margin: 1px;
+    width: 34px;
+    height: 40px;
+  }
+  div {
+    display: none;
+  }
+}
+%menuHoverStyle {
+  display: flex;
+  justify-content: flex-start;
+  vertical-align: bottom;
+  img {
+    display: none;
+  }
+  div {
+    text-align: center;
+    display: block;
+    margin-top: 336px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    color: black;
+
+  }
+}
+
+
+
+body {
+  margin: 0;
+  font-family: "Pretendard";
+
+  header {
+    z-index: 2;
+    color: white;
+    height: $topBarHeight;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .time {
+      margin-left: 20px;
+      font-size: 20px;
+      color: yellow;
+      text-shadow: 2px 8px 6px rgba(255,0,0,0.8), 0px -3px 20px rgba(255,255,255,0.7);
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      .firstShowPart{
+        @extend %menuStyle;
+        &:hover{
+          @extend %menuHoverStyle;
+        }     
+      }
+      .secondShowPart{
+        @extend %menuStyle;
+        &:hover{
+          @extend %menuHoverStyle;
+        }       
+      }
+      .thirdShowPart{        
+        @extend %menuStyle;
+  
+        &:hover {
+          @extend %menuHoverStyle;
+        }
+      }
+      .fourthShowPart{
+        @extend %menuStyle;
+  
+        &:hover {
+          @extend %menuHoverStyle;
+        }
+      }      
+    }
+  }  
+
+  main {
+    margin: 0;
+    img {
+      vertical-align: bottom;
+      position: relative;
+      width: 100%;
+      object-fit: contain;
+    }
+    
+    .mainImage {
+      @extend %childCenterStyle;
+      top: $topBarHeight * 2;
+      height: $mainImageHeight;
+      object-fit: contain;
+    }
+
+    .quotePart {
+      @extend %childCenterStyle;
+      @extend %textContainer;
+      top: $topBarHeight * 2 + calc($mainImageHeight / 2);
+      margin-top: $topBarHeight;
+    }
+
+    .search {
+      @extend %childCenterStyle;
+      top: 50%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .searchContainer {
+        @extend %inputStyle;
+        background-color: white;
+        width: 50%;
+        font-size: 20px;
+        margin-right: 30px;
+        padding: 5px 10px;
+      }
+
+      .searchBtn {
+        @extend %buttonStyle;
+      }
+    }
+
+    .searchResult {
+      @extend %childCenterStyle;
+      top: 60%;
+
+      .resultText {
+        @extend %textContainer;
+      }
+
+      .resultCard {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        display: flex;
+
+        img {
+          margin: 10px 5px;
+          width: 100px;
+          height: 150px;
+        }
+      }
+    }
+
+    
+  }
+
+  footer {
+    border-top: 1px solid grey;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 100%;
+    height: 64px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+
+    .companyInfo {
+      margin-right: 100px;
+      font-size: 18px;
+    }
+  }
+}
